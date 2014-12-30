@@ -1,0 +1,27 @@
+{
+    "name" : "staglag13/wom-test-bundle",
+    "description" : "PHP Developers Recruiting Test",
+    "type" : "symfony-bundle",
+    "homepage": "http://github.com/Staglag13/wom",
+    "license": "MIT",
+    "authors" : [{
+        "name" : "Staglag13",
+        "email" : "Staglag13@users.noreply.github.com"
+    }],
+    "minimum-stability": "dev",
+    "require" : {
+    },
+    "autoload" : {
+        "psr-0" : {
+            "Staglag13\\WomTestBundle" : ""
+        }
+    },
+    "target-dir" : "Staglag13/WomTestBundle",
+    "repositories" : [{
+    }],
+    "extra" : {
+        "branch-alias" : {
+            "dev-master": "1.0.x-dev"
+        }
+    }
+}

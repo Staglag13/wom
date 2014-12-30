@@ -1,0 +1,7 @@
+staglag13_wom_test_musicmoz:
+    path:     /musicmoz
+    defaults: { _controller: Staglag13WomTestBundle:Musicmoz:index }
+
+staglag13_wom_test_musicmoz_download_route:
+    pattern:  /musicmoz/download
+    defaults: { _controller: Staglag13WomTestBundle:Musicmoz:download }

@@ -1,0 +1,43 @@
+{% extends "TwigBundle::layout.html.twig" %}
+
+{% block title %}{{ title }}{% endblock %}
+
+
+{% block body %}
+    {% for flashMessage in app.session.flashbag.get('notice') %}
+        <div class="flash-message">
+            <em>Notice</em>: {{ flashMessage }}
+        </div>
+    {% endfor %}
+
+    {% block content_header %}
+        <ul id="menu">
+            {% block content_header_more %}
+                <li><a href="{{ path('staglag13_wom_test_musicmoz') }}">MusicMoz</a></li>
+            {% endblock %}
+        </ul>
+
+        <div style="clear: both"></div>
+    {% endblock %}
+
+    <div class="block">
+        {% block content %}
+
+            <h1>{{ title }} </h1>
+
+            <div>Source data from {{ url }}</div>
+
+            <div><a href="{{ path('staglag13_wom_test_musicmoz_download_route') }}">Output XML</a></div>
+
+        {% endblock %}
+    </div>
+
+    {% if code is defined %}
+        <h2>Code behind this page</h2>
+        <div class="block">
+            <div class="symfony-content">{{ code|raw }}</div>
+        </div>
+    {% endif %}
+{% endblock %}
+
+
